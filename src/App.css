@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+.wrapper {
+  max-width: 350px;
+  background: black;
+  margin: 0 auto;
+  border-radius: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display-screen {
+  text-align: right;
+  margin: 40px 30px 0 0;
+  padding-top: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display-screen .current {
+  color: white;
+  font-size: 4.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-wrap {
+  padding-bottom: 20px;
+}
+
+.btn-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.btn-action {
+  flex-basis: 23.5%;
+  height: 75px;
+  font-size: 2rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: none;
+  border-radius: 50%;
+  background: gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.plus, .divide, .multiply, .subtract {
+  background: orange;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.big {
+  position: relative;
+  flex-basis: 49%;
+  border-radius: 50px;
+  text-align: left;
 }
+
+.action {
+  background: white;
+  color: orange;
+}
+
+.big > .number-0 {
+  position: absolute;
+  left: 30px;
+  bottom: 18px;
+}
+
+.btn-row:first-child .btn-action:not(.divide) {
+  background: whitesmoke;
+  color: black;
+}
+
+/* .btn-row .btn-action:last-child {
+  background: orange;
+  color: white;
+} */
+
+.btn-action:active, .btn-row:first-child .btn-action:active { 
+  background: rgba(255, 241, 241, 0.397);
+}
+
+.btn-row .btn-action:last-child:active {
+  background: rgba(255, 241, 241, 0.397);
+  color: orange;
+}
+
